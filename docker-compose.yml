@@ -1,0 +1,15 @@
+services:
+  website:
+    build: .
+    command: yarn dev
+    volumes:
+      - ./:/usr/src/app/
+    ports:
+      - 3000:3000
+  cms:
+    build: ../ARCardGameManager/.
+    command: npx strapi develop
+    volumes:
+      - ../ARCardGameManager/:/opt/app
+    ports:
+      - 1337:1337
