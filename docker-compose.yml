@@ -2,6 +2,9 @@ services:
   website:
     build: .
     command: yarn dev
+    environment: 
+      NEXT_PUBLIC_STRAPI_API_URL: http://cms:1337
+
     volumes:
       - ./:/usr/src/app/
     ports:

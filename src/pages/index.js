@@ -2,9 +2,9 @@ import Head from 'next/head'
 import NextImage from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import { fetchAPI } from "./api/api";
 
 const inter = Inter({ subsets: ['latin'] })
-
 
 export default function Home( {website}) {
   return (
@@ -29,12 +29,12 @@ export default function Home( {website}) {
 
       <header id="header">
 				<div className="content">
-					<h1><a href="#">Fractal</a></h1>
-					<p>Just a simple, single page responsive<br />
-					template brought to you by <a href="http://html5up.net">HTML5 UP</a></p>
+					<h1><a href="#">{ website.title} Joue Maths Gie</a></h1>
+					<p>Jeu de plateau sur les Maths au collège<br />
+					Créer par les élèves du collège de Bazas</p>
 					<ul className="actions">
-						<li><a href="#" className="button primary icon solid fa-download">Download</a></li>
-						<li><a href="#one" className="button icon solid fa-chevron-down scrolly">Learn More</a></li>
+						<li><a href="#" className="button primary icon solid fa-download" >Télécharger</a></li>
+						<li><a href="#one" className="button icon solid fa-chevron-down scrolly">En savoir plus</a></li>
 					</ul>
 				</div>
 				<div className="image phone"><div className="inner"><img src="images/screen.jpg" alt="" /></div></div>
@@ -126,12 +126,11 @@ export default function Home( {website}) {
 
 export async function getStaticProps(context) {
 
- 
-
+  const website = await fetchAPI("/website");
   // const res = await fetch("http://localhost:1337/website")
-  // const website = await res.json()
+  //const website = await res.json()
 
-  const website = { title: "Helloz"}
+  // const website = { title: "Helloz"}
 
   return {
     props: {website}, // will be passed to the page component as props
