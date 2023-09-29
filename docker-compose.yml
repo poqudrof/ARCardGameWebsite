@@ -3,16 +3,17 @@ services:
     build: .
     command: yarn dev
     environment: 
-      NEXT_PUBLIC_STRAPI_API_URL: http://cms:1337
+      NEXT_PUBLIC_STRAPI_API_URL: http://localhost:1337
 
     volumes:
       - ./:/usr/src/app/
     ports:
       - 3000:3000
-  cms:
-    build: ../ARCardGameManager/.
-    command: npx strapi develop
-    volumes:
-      - ../ARCardGameManager/:/opt/app
-    ports:
-      - 1337:1337
+
+  # cms:
+  #   build: ../ARCardGameManager/.
+  #   command: npx strapi develop
+  #   volumes:
+  #     - ../ARCardGameManager/:/opt/app
+  #   ports:
+  #     - 1337:1337
