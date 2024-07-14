@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 8,
+      "attributes": {
+        "short_name": "e3d",
+        "createdAt": "2023-09-22T16:23:34.510Z",
+        "updatedAt": "2023-09-22T16:23:34.510Z",
+        "publishedAt": "2023-09-22T16:23:34.507Z",
+        "title": "Espaces 3D"
+      }
+    },
+    {
+      "id": 9,
+      "attributes": {
+        "short_name": "em",
+        "createdAt": "2023-09-22T16:23:34.640Z",
+        "updatedAt": "2023-09-22T16:23:34.640Z",
+        "publishedAt": "2023-09-22T16:23:34.638Z",
+        "title": "English Maths"
+      }
+    },
+    {
+      "id": 10,
+      "attributes": {
+        "short_name": "mdp",
+        "createdAt": "2023-09-22T16:23:34.775Z",
+        "updatedAt": "2023-09-22T16:23:34.775Z",
+        "publishedAt": "2023-09-22T16:23:34.772Z",
+        "title": "Montagne de problèmes"
+      }
+    },
+    {
+      "id": 11,
+      "attributes": {
+        "short_name": "p2d",
+        "createdAt": "2023-09-22T16:23:34.953Z",
+        "updatedAt": "2023-09-22T16:23:34.953Z",
+        "publishedAt": "2023-09-22T16:23:34.950Z",
+        "title": "Plaine de 2D"
+      }
+    },
+    {
+      "id": 12,
+      "attributes": {
+        "short_name": "vdn",
+        "createdAt": "2023-09-22T16:23:35.123Z",
+        "updatedAt": "2023-09-22T16:23:35.123Z",
+        "publishedAt": "2023-09-22T16:23:35.121Z",
+        "title": "Vallée des nombres"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 5
+    }
+  }
+}
