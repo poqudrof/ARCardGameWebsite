@@ -1,11 +1,13 @@
-import { getSession, signIn, signOut } from "next-auth/client";
+"use client";
+
+import { useSession, signIn, signOut } from "next-auth/react";
 import Head from 'next/head';
 import Link from "next/link";
 import React from "react";
 
-const IndexPage = ({
-  session,
-}) => {
+const IndexPage = () => {
+  const { data: session } = useSession();
+
   const signInButtonNode = () => {
     if (session) {
       return false;
@@ -76,15 +78,6 @@ const IndexPage = ({
       </div>
     </div>
   );
-};
-
-export const getServerSideProps = async ({ req }) => {
-  const session = await getSession({ req });
-  return {
-    props: {
-      session,
-    },
-  };
 };
 
 export default IndexPage;
